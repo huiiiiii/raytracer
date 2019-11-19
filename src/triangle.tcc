@@ -42,19 +42,19 @@ public:
 //  minimum_t contains the parametic value s for the current nearest triangle (not used in this unoptimized version)
   bool intersects(Vector<T,3> origin, Vector<T,3> direction,
                    FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t = INFINITY) {
-    Vector<T, 3> normal =  cross_product(p2 - p1, p3  - p1);
+    Vector<T, 3> normal =  cross_product(p2 - p1, p3  - p1); // Normale des Dreiecks bestimmen
     
     T normalRayProduct = normal.scalar_product( direction );
     T area = normal.length(); // used for u-v-parameter calculation
 
-    if ( fabs(normalRayProduct) < EPSILON ) {
+    if ( fabs(normalRayProduct) < EPSILON ) { // Ist die Richtung parallel zum Dreieck?
       return false;
     }
 
     T d = normal.scalar_product( p1 );
     t = (d - normal.scalar_product( origin ) ) / normalRayProduct;
 
-    if ( t < 0.0 ) {
+    if ( t < 0.0 ) { // Ist Dreieck in der falschen Richtung?
       return false;
     }
    
@@ -88,9 +88,45 @@ public:
 // optimized version
 bool intersects(Vector<T,3> origin, Vector<T,3> direction,
                    FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t) {
-    // from here
-    // TODO: your code
-    // to here
+
+    Vector<T, 3> normal =  cross_product(p2 - p1, p3  - p1); // Normale des Dreiecks bestimmen
+
+    T normalRayProduct = normal.scalar_product( direction );
+
+    if ( fabs(normalRayProduct) < EPSILON ) { // Ist die Richtung parallel zum Dreieck?
+      return false;
+    }
+
+    T d = normal.scalar_product( p1 );
+    t = (d - normal.scalar_product( origin ) ) / normalRayProduct; // Wie oft wird direction benötigt, um von origin die Ebene des Dreiecks zu schneiden
+
+    if ( t < 0.0 || t > minimum_t) { // Ist das Dreieck in der falschen Richtung? Oder gibt es schon ein anderes Dreieck, welches weiter vorne liegt?
+      return false;
+    }
+
+    Vector<T, 3> intersection = origin + t * direction; // Der Schnittpunkt der direction von origin aus mit der Ebene des Dreiecks
+
+    // Ist der Schnittpunkt innerhalb des Dreiecks?
+    Vector<T, 3> vector1 = cross_product(p2 - p1,  intersection - p1 );
+    if ( normal.scalar_product(vector1) < 0.0 ) {
+      return false;
+    }
+
+    vector1 = cross_product(p3 - p2,  intersection - p2 );
+    if ( normal.scalar_product(vector1) < 0.0 ) {
+      return false;
+    }
+
+    Vector<T, 3> vector2 = cross_product(p1 - p3, intersection - p3 );
+    if (normal.scalar_product(vector2) < 0.0 ) {
+      return false;
+    }
+
+    // u und v berechnen
+    T area = normal.square_of_length();
+    u = sqrt(vector1.square_of_length() / area);
+    v = sqrt(vector2.square_of_length() / area);
+
     return true;
   }
 #endif
