@@ -89,22 +89,27 @@ public:
 bool intersects(Vector<T,3> origin, Vector<T,3> direction,
                    FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t) {
 
-    Vector<T, 3> normal =  cross_product(p2 - p1, p3  - p1); // Normale des Dreiecks bestimmen
+    // Normale des Dreiecks bestimmen
+    Vector<T, 3> normal =  cross_product(p2 - p1, p3  - p1);
 
     T normalRayProduct = normal.scalar_product( direction );
 
-    if ( fabs(normalRayProduct) < EPSILON ) { // Ist die Richtung parallel zum Dreieck?
+    // Ist die Richtung parallel zum Dreieck?
+    if ( fabs(normalRayProduct) < EPSILON ) {
       return false;
     }
 
     T d = normal.scalar_product( p1 );
-    t = (d - normal.scalar_product( origin ) ) / normalRayProduct; // Wie oft wird direction benötigt, um von origin die Ebene des Dreiecks zu schneiden
+    // Wie oft wird direction benötigt, um von origin die Ebene des Dreiecks zu schneiden
+    t = (d - normal.scalar_product( origin ) ) / normalRayProduct;
 
-    if ( t < 0.0 || t > minimum_t) { // Ist das Dreieck in der falschen Richtung? Oder gibt es schon ein anderes Dreieck, welches weiter vorne liegt?
+    // Ist das Dreieck in der falschen Richtung? Oder gibt es schon ein anderes Dreieck, welches weiter vorne liegt?
+    if ( t < 0.0 || t > minimum_t) {
       return false;
     }
 
-    Vector<T, 3> intersection = origin + t * direction; // Der Schnittpunkt der direction von origin aus mit der Ebene des Dreiecks
+    // Der Schnittpunkt der direction von origin aus mit der Ebene des Dreiecks
+    Vector<T, 3> intersection = origin + t * direction;
 
     // Ist der Schnittpunkt innerhalb des Dreiecks?
     Vector<T, 3> vector1 = cross_product(p2 - p1,  intersection - p1 );
@@ -122,11 +127,12 @@ bool intersects(Vector<T,3> origin, Vector<T,3> direction,
       return false;
     }
 
-    // u und v berechnen
+    // u und v berechnen. Wurzel jeweils erst am Ende ziehen
     T area = normal.square_of_length();
     u = sqrt(vector1.square_of_length() / area);
     v = sqrt(vector2.square_of_length() / area);
 
+    //return that there is an intersection
     return true;
   }
 #endif
