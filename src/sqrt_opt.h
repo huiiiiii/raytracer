@@ -1,5 +1,6 @@
 #ifndef SQRT_OPT_H
 #define SQRT_OPT_H
+#include <iostream>
 
 typedef float v4sf __attribute__ ((vector_size (16)));
 typedef int v4si __attribute__ ((vector_size (16)));
@@ -7,7 +8,9 @@ typedef int v4si __attribute__ ((vector_size (16)));
 
 template <size_t LOOPS = 2>
 float sqrt1(float * a) {
+    // a zu int casten
     int * ai = reinterpret_cast<int *>(a) ;
+    // initial berechnen
     int initial = (1 << 29) + (*ai >> 1) - (1 << 22) - 0x4C000;
     // initial zurueck casten zu float
     float root = *(float*)&initial;
@@ -20,9 +23,21 @@ float sqrt1(float * a) {
 
 template <size_t LOOPS = 2>
 void sqrt2(float * __restrict__ a, float * __restrict__ root) {
-  // from here
-  // TODO: your code
-  // to here
+    // a zu int casten
+    int * ai = reinterpret_cast<int *>(a) ;
+    // initial berechnen
+    int * initial = reinterpret_cast<int *>( root ) ;
+    initial[0] = (1 << 29) + (ai[0] >> 1) - (1 << 22) - 0x4C000;
+    initial[1] = (1 << 29) + (ai[1] >> 1) - (1 << 22) - 0x4C000;
+    initial[2] = (1 << 29) + (ai[2] >> 1) - (1 << 22) - 0x4C000;
+    initial[3] = (1 << 29) + (ai[3] >> 1) - (1 << 22) - 0x4C000;
+    // Newton Verfahren durchfuehren
+    for (unsigned int j = 0; j < LOOPS; j++) {
+        root[0] = 0.5 * ( root[0] + (a[0] / root[0]));
+        root[1] = 0.5 * ( root[1] + (a[1] / root[1]));
+        root[2] = 0.5 * ( root[2] + (a[2] / root[2]));
+        root[3] = 0.5 * ( root[3] + (a[3] / root[3]));
+    }
 }
 
 

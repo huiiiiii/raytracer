@@ -2,6 +2,12 @@
 #include <cmath>
 #include "sqrt_opt.h"
 
+void resetRoots(float * roots) {
+    for (int i = 0; i < 4; i++) {
+        roots[i] = 0;
+    }
+}
+
 template <size_t LOOPS = 2>
 void test_sqrt(void) {
     std::cout << LOOPS  << " iterations" << std::endl;
@@ -13,21 +19,28 @@ void test_sqrt(void) {
     testFloats[1] = 4;
     testFloats[2] = 9;
     testFloats[3] = 16;
+    resetRoots(testRoots);
 
     for (int i = 0; i < 4; i++) {
         testRoots[i] = sqrt(testFloats[i]);
         std::cout << "sqrt(" << testFloats[i] << ") = " << testRoots[i] << std::endl;
     }
 
+    resetRoots(testRoots);
+
     for (int i = 0; i < 4; i++) {
         testRoots[i] = sqrt1<LOOPS>(testFloats + i);
         std::cout << "sqrt1(" << testFloats[i] << ") = " << testRoots[i] << std::endl;
     }
 
+    resetRoots(testRoots);
+
     sqrt2<LOOPS>(testFloats, testRoots);
     for (int i = 0; i < 4; i++) {
         std::cout << "sqrt2(" << testFloats[i] << ") = " << testRoots[i] << std::endl;
     }
+
+    resetRoots(testRoots);
 
     sqrt3<LOOPS>(testFloats, testRoots);
     for (int i = 0; i < 4; i++) {
