@@ -7,12 +7,15 @@ typedef int v4si __attribute__ ((vector_size (16)));
 
 template <size_t LOOPS = 2>
 float sqrt1(float * a) {
-  float root;
-  // from here
-  root = 0; // to avoid a warning, delete this in your code
-  // TODO: your code
-  // to here
-  return root;
+    int * ai = reinterpret_cast<int *>(a) ;
+    int initial = (1 << 29) + (*ai >> 1) - (1 << 22) - 0x4C000;
+    // initial zurueck casten zu float
+    float root = *(float*)&initial;
+    // Newton Verfahren durchfuehren
+    for (unsigned int j = 0; j < LOOPS; j++) {
+        root = 0.5 * ( root + (* a / root));
+    }
+    return root;
 }
 
 template <size_t LOOPS = 2>
