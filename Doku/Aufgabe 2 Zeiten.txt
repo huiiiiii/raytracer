@@ -1,0 +1,408 @@
+2 iterations
+generating 200000 random values...
+math sqrt
+1031325 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+171906 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187514 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187514 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+187497 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1015702 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+281287 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+265630 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+281287 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265627 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015718 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359401 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375045 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+359385 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359402 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1015690 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187532 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187498 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187533 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+187515 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1015708 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+281256 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281273 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265663 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+281273 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1031334 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359389 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375031 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+359420 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359388 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1015707 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187515 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187515 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187516 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+171903 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1031335 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265646 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281257 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265664 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265645 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015724 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359405 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375031 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+375030 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359388 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1015724 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187515 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187515 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187515 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+187515 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1031337 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265645 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281273 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265646 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265647 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015725 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+343777 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+359403 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+375049 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359404 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1031333 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+171873 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187532 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187515 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+171871 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1031352 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265647 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281273 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265630 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265646 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015725 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359388 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375047 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+359387 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359421 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1031326 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187498 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187514 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187530 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+171889 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1015717 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265646 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281271 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265645 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+281271 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015702 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359402 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+406295 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+406267 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+406293 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1046952 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187515 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187515 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+203137 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+187514 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1031327 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265629 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281289 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265644 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+281254 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1031344 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359385 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375028 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+390672 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359402 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1031330 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+171871 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187514 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187531 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+203125 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1046970 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265627 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281289 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265627 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265645 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1031347 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359384 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+359402 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+359402 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359402 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1031344 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187513 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187515 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187513 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+171888 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1015717 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265645 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+265644 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265645 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265644 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1015718 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+359402 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+375028 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+359402 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359402 [ns]
+
+
+2 iterations
+generating 200000 random values...
+math sqrt
+1015715 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+187514 [ns]
+sqrt1(3701.2) = 60.8375
+sqrt1 (Newton method for single float, four times a loop)
+187514 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+187514 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+187515 [ns]
+3 iterations
+generating 200000 random values...
+math sqrt
+1031327 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+265646 [ns]
+sqrt1(977.47) = 31.2645
+sqrt1 (Newton method for single float, four times a loop)
+281271 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+265645 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+265644 [ns]
+4 iterations
+generating 200000 random values...
+math sqrt
+1031328 [ns]
+sqrt1 (Newton method for single float, one time a loop)
+343775 [ns]
+sqrt1(5515.36) = 74.2655
+sqrt1 (Newton method for single float, four times a loop)
+359419 [ns]
+sqrt2 (Newton method for sequence of 4 floats)
+375011 [ns]
+sqrt3 (Newton method for sequence of 4 floats, SIMD)
+359420 [ns]
