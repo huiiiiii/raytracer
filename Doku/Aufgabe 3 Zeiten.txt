@@ -1,0 +1,164 @@
+g++ -Wall -pedantic -std=c++11 -march=native -mfpmath=sse -msse -O3 -D OPTIMIZED_INTERSECTS raytracer.cc statistics.cc kdtree.cc
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 6.91346 [s] .
+  Number of ray / triangle intersection tests : 519950720
+  Number of ray / triangle intersections found : 35294
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 6.87557 [s] .
+  Number of ray / triangle intersection tests : 519950720
+  Number of ray / triangle intersections found : 35294
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 6.89121 [s] .
+  Number of ray / triangle intersection tests : 519950720
+  Number of ray / triangle intersections found : 35294
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 6.91299 [s] .
+  Number of ray / triangle intersection tests : 519950720
+  Number of ray / triangle intersections found : 35294
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 6.93803 [s] .
+  Number of ray / triangle intersection tests : 519950720
+  Number of ray / triangle intersections found : 35294
+
+
+g++ -Wall -pedantic -std=c++11 -march=native -mfpmath=sse -msse -O3 -D OPTIMIZED_INTERSECTS -D USE_KDTREE raytracer.cc statistics.cc kdtree.cc
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 1.70324 [s] .
+  Number of ray / triangle intersection tests : 139090305
+  Number of ray / triangle intersections found : 36806
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 1.70325 [s] .
+  Number of ray / triangle intersection tests : 139090305
+  Number of ray / triangle intersections found : 36806
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 1.73451 [s] .
+  Number of ray / triangle intersection tests : 139090305
+  Number of ray / triangle intersections found : 36806
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 1.70325 [s] .
+  Number of ray / triangle intersection tests : 139090305
+  Number of ray / triangle intersections found : 36806
+
+reading from       : examples/teapot.obj
+writing bmp to     : output.bmp
+resolution x set to: 256
+resolution y set to: 256
+vertices reversed  : 0
+write ppm          : 0
+no of triangles : 6320
+no of vertices : 3644
+no of normals : 3644
+memory used for all triangles [byte] : 455040
+Statistics
+  FLOAT = float, sizeof(FLOAT) = 4
+  Raytracing time: 1.70325 [s] .
+  Number of ray / triangle intersection tests : 139090305
+  Number of ray / triangle intersections found : 36806

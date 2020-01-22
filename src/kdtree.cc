@@ -142,8 +142,10 @@ bool KDTree::hasNearestTriangle(Vector<FLOAT,3> eye, Vector<FLOAT,3> direction, 
     for (unsigned int i = 0; i < triangles.size(); i++) {
         Triangle<FLOAT> *triangle = triangles[i];
         //std::cerr << "hasNearestTriangle: " << triangle->p1 << " min t: " << minimum_t << std::endl;
+        stats.no_ray_triangle_intersection_tests++;
         bool intersect = triangle->intersects(eye, direction, t, u, v, minimum_t);
         if (intersect) {
+            stats.no_ray_triangle_intersections_found++;
             if ( (nearest_triangle == nullptr)  || (t < minimum_t) ) {
                 nearest_triangle = triangle;
                 minimum_t = t;
