@@ -27,7 +27,7 @@ public:
   // the two resulting bounding boxes are written to left and right
   void split(BoundingBox & left, BoundingBox & right);
 
-  // returnes true iff one of the three edges of the given triangle
+  // returns true iff one of the three edges of the given triangle
   // is contained in this bounding box
   bool contains(Triangle<FLOAT> *triangle);
 
