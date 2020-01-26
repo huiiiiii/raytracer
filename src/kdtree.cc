@@ -71,17 +71,13 @@ KDTree * KDTree::buildTree(KDTree * tree, std::vector< Triangle<FLOAT> *> & tria
     }
     left = new KDTree();
     right = new KDTree();
-    BoundingBox *leftBox = new BoundingBox();
-    BoundingBox *rightBox = new BoundingBox(); //keine lokalen
-    box.split(*leftBox, *rightBox);
-    left->box = *leftBox;
-    right->box = *rightBox;
+    box.split(left->box, right->box);
     std::vector< Triangle<FLOAT> *> leftTriangles;
     std::vector< Triangle<FLOAT> *> rightTriangles;
     for (unsigned int i = 0; i < triangles.size(); i++) {
         Triangle<FLOAT> *triangle = triangles[i];
-        if (leftBox->contains(triangle)) {
-            if (rightBox->contains(triangle)) {
+        if (left->box.contains(triangle)) {
+            if (right->box.contains(triangle)) {
                 this->triangles.push_back( triangle );
             } else {
                 leftTriangles.push_back( triangle );
@@ -118,24 +114,19 @@ bool KDTree::hasNearestTriangle(Vector<FLOAT,3> eye, Vector<FLOAT,3> direction, 
     if (!box.intersects(eye, direction)) {
         return false;
     }
-    FLOAT minimum_u  = u, minimum_v = v;
     if (left != nullptr) {
         bool intersect = left->hasNearestTriangle(eye, direction, nearest_triangle, t, u, v, minimum_t);
         if (intersect) {
-            if ( (nearest_triangle == nullptr)  || (t < minimum_t) ) { //weg
+            if (t < minimum_t) {
                 minimum_t = t;
-                minimum_u = u;
-                minimum_v = v;
             }
         }
     }
     if (right != nullptr) {
         bool intersect = right->hasNearestTriangle(eye, direction, nearest_triangle, t, u, v, minimum_t);
         if (intersect) {
-            if ( (nearest_triangle == nullptr)  || (t < minimum_t) ) {
+            if (t < minimum_t) {
                 minimum_t = t;
-                minimum_u = u;
-                minimum_v = v;
             }
         }
     }
@@ -149,13 +140,9 @@ bool KDTree::hasNearestTriangle(Vector<FLOAT,3> eye, Vector<FLOAT,3> direction, 
             if ( (nearest_triangle == nullptr)  || (t < minimum_t) ) {
                 nearest_triangle = triangle;
                 minimum_t = t;
-                minimum_u = u;
-                minimum_v = v;
             }
         }
     }
-    t = minimum_t; //unnötig raus
-    u = minimum_u;
-    v = minimum_v;
+    t = minimum_t;
     return nearest_triangle != nullptr;
 }
